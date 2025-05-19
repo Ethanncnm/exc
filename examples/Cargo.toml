@@ -9,6 +9,7 @@ anyhow = { workspace = true }
 exc = { workspace = true, features = [
     "okx",
     "binance",
+    "gateio",
     "instrument",
     "poll",
     "rustls-tls",
@@ -17,6 +18,7 @@ exc = { workspace = true, features = [
 ] }
 exc-okx = { workspace = true }
 exc-binance = { workspace = true }
+exc-gateio = { workspace = true }
 tokio = { workspace = true, features = ["full", "tracing"] }
 tracing = { workspace = true }
 tracing-subscriber = { version = "0.3.3", features = ["env-filter", "json"] }

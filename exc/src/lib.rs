@@ -47,6 +47,9 @@ pub mod prelude {
 
     #[cfg(feature = "binance")]
     pub use crate::Binance;
+
+    #[cfg(feature = "gateio")]
+    pub use crate::Gateio;
 }
 
 /// The result type of `exc`.
@@ -67,8 +70,17 @@ pub mod binance {
     pub use exc_binance::*;
 }
 
+#[cfg(feature = "gateio")]
+/// Gate.io exchange service.
+pub mod gateio {
+    pub use exc_gateio::*;
+}
+
 #[cfg(feature = "okx")]
 pub use crate::okx::Okx;
 
 #[cfg(feature = "binance")]
 pub use crate::binance::Binance;
+
+#[cfg(feature = "gateio")]
+pub use crate::gateio::Gateio;
