@@ -31,11 +31,13 @@ rustls-tls = [
     "exc-core/rustls-tls",
     "exc-okx?/rustls-tls",
     "exc-binance?/rustls-tls",
+    "exc-gateio?/rustls-tls",
 ]
 
 okx = ["exc-okx"]
 okx-prefer-client-id = ["okx", "exc-okx/prefer-client-id"]
 binance = ["exc-binance"]
+gateio = ["exc-gateio"]
 websocket = ["exc-core/websocket"]
 driven = ["exc-core/driven"]
 http = ["exc-core/http"]
@@ -62,6 +64,7 @@ tokio = { workspace = true, features = ["rt", "sync", "macros", "time"] }
 
 exc-okx = { workspace = true, default-features = false, optional = true }
 exc-binance = { workspace = true, default-features = false, optional = true }
+exc-gateio = { workspace = true, default-features = false, optional = true }
 
 [package.metadata.docs.rs]
 all-features = true

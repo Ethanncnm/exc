@@ -1,0 +1,36 @@
+[package]
+name = "exc-gateio"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+readme = "./README.md"
+description = "Gate.io exchange services"
+keywords = ["exchange", "tower", "gateio"]
+
+[features]
+default = ["rustls-tls"]
+native-tls = ["exc-core/native-tls"]
+rustls-tls = ["exc-core/rustls-tls"]
+
+[dependencies]
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+futures = { workspace = true }
+http = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+hmac = { workspace = true }
+sha2 = { workspace = true }
+hyper = { workspace = true, features = ["client", "http1"] }
+exc-core = { workspace = true, default-features = false, features = ["http", "retry"] }
+tower = { workspace = true, features = ["util", "buffer", "retry"] }
+tokio = { workspace = true, features = ["sync", "rt-multi-thread", "time", "macros"] }
+time = { workspace = true, features = ["serde-human-readable", "macros"] }
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]

@@ -8,6 +8,7 @@ members = [
     "exc-symbol",
     "exc-okx",
     "exc-binance",
+    "exc-gateio",
     "examples",
 ]
 resolver = "2"
@@ -31,6 +32,7 @@ exc-make = { version = "0.7.3-nightly", path = "./exc-make", default-features = 
 exc-core = { version = "0.7.3-nightly", path = "./exc-core", default-features = false }
 exc-binance = { version = "0.7.3-nightly", path = "./exc-binance", default-features = false }
 exc-okx = { version = "0.7.3-nightly", path = "./exc-okx", default-features = false }
+exc-gateio = { version = "0.7.3-nightly", path = "./exc-gateio", default-features = false }
 exc = { path = "./exc", default-features = false }
 
 indicator = "0.4.0"
